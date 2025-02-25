@@ -44,6 +44,10 @@ app.use(
 app.use('/users', userRoutes);
 app.use('/tasks', taskRoutes);
 
+app.get('/', (req, res) => {
+    res.redirect('/register');
+});
+
 // Render Views
 app.get('/register', (req, res) => {
     res.render('register');
